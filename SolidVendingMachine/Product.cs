@@ -15,7 +15,7 @@ namespace SolidVendingMachine
 
         public override string ToString()
         {
-            return $"ID: {ID} - {Name} - {Price:0.##} ";
+            return $"ID: {ID} - {Name} - {new PriceTagMaker().MakePriceTagForProduct(this)} ";
         }
     }
 }

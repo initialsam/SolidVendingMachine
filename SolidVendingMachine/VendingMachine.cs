@@ -4,7 +4,11 @@ using System.Text.Json;
 
 public class VendingMachine
 {
-
+    private JsonMenuLoader _menuLoader;
+    public VendingMachine(JsonMenuLoader menuLoader)
+    {
+        this._menuLoader = menuLoader;
+    }
     public void SayHello()
     {
         Console.WriteLine("Please enter your name");
@@ -21,8 +25,10 @@ public class VendingMachine
     public void DisplayMenu()
     {
         // read menu
-        string text = File.ReadAllText(@"./menu.json");
-        var products = JsonSerializer.Deserialize<List<Product>>(text);
+        //string text = File.ReadAllText(@"./menu.json");
+        //var products = JsonSerializer.Deserialize<List<Product>>(text);
+        //SPR
+        var products = _menuLoader.LoadMenu();
 
         // show menu
         foreach (var product in products)

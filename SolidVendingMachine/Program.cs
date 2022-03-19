@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            var vendingMachine = new VendingMachine();
+            var menuLoader = new JsonMenuLoader();
+            var vendingMachine = new VendingMachine(menuLoader);
             vendingMachine.Start();
         }
     }
