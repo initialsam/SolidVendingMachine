@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SolidVendingMachine
 {
-    public class JsonMenuLoader
+    public class JsonMenuLoader : IMenuLoader
     {
         public List<Product> LoadMenu()
         {

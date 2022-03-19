@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Update="menu.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="menu.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

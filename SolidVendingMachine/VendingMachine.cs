@@ -4,8 +4,8 @@ using System.Text.Json;
 
 public class VendingMachine
 {
-    private JsonMenuLoader _menuLoader;
-    public VendingMachine(JsonMenuLoader menuLoader)
+    private IMenuLoader _menuLoader;
+    public VendingMachine(IMenuLoader menuLoader)
     {
         this._menuLoader = menuLoader;
     }
