@@ -7,6 +7,9 @@
             var menuLoader = new CsvMenuLoader();
             var vendingMachine = new VendingMachine(menuLoader);
             vendingMachine.Start();
+
+
+            new HighEfficiencyVendingMachine(new JsonMenuLoader()).Start();
         }
     }
 }
